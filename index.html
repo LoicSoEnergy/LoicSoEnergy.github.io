@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Architecture</title>
+<style>
+  .container { 
+    width:max-content;
+  }
+  .hiddenTitle{
+    display:none;
+  }
+  .displayedTitle{
+    display:inline-block;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div id="imgWithMap">
+      <img id="diamond" src="assets/architecture-all.png" 
+      usemap="#image-map-all" />
+
+      <map name="image-map-all">
+          <area target="" alt="Aerial view"
+            coords="71,120,151,201,392,202,471,120,391,40,151,39" shape="poly"
+            onmouseover="changeToAerial()" 
+            onmouseout="revertAreaAndTitle()"
+            data-title="Overview of SoEnergy's architecture"
+            href="https://app.terrastruct.com/diagrams/1495766155">
+
+          <area target="" alt="Use cases"
+            coords="72,124,152,204,150,441,104,394,70,360" shape="poly"
+            onmouseover="changeToUseCases()" 
+            onmouseout="revertAreaAndTitle()"
+            data-title="Use cases"
+            href="https://app.terrastruct.com/diagrams/270436396">
+
+          <area target="" alt="Infrastructure"
+            coords="390,201,152,441" shape="rect"
+            onmouseover="changeToInfrastructure()" 
+            onmouseout="revertAreaAndTitle()"
+            data-title="Infrastructure"
+            href="https://app.terrastruct.com/diagrams/92704779">
+
+          <area target="" alt="DataStores"
+            coords="392,201,471,120,472,362,391,442" shape="poly"
+            onmouseover="changeToDatastores()" 
+            onmouseout="revertAreaAndTitle()"
+            data-title="dataStores"  
+            href="https://app.terrastruct.com/diagrams/105369488">
+      </map>  
+    </div>
+    <div>
+      <div class="hiddenTitle" id="titleAerial">
+        Overview of our architecture. This view is perfect for anyone wanting to see the interaction between SoEnergy and other system. Uses the C4 model, starting with a context diagram.
+      </div>
+      <div class="hiddenTitle" id="titleUseCases">
+        use cases
+      </div>
+      <div class="hiddenTitle" id="titleInfrastructure">
+        Shows all our internal infrastructure. 
+      </div>
+      <div class="hiddenTitle" id="titleDatastores">
+        data
+      </div>
+    </div>
+  </div>
+  <script>
+    function changeToAerial() {
+        changeAreaAndTitle('assets/highlight-aerial.png', 'titleAerial');
+    }
+
+    function changeToUseCases(){
+        changeAreaAndTitle('assets/highlight-use-cases.png', 'titleUseCases');
+    }
+
+    function changeToInfrastructure() {
+        changeAreaAndTitle('assets/highlight-infrastructure.png', 'titleInfrastructure');
+    }
+
+    function changeToDatastores() {
+        changeAreaAndTitle('assets/highlight-datastores.png', 'titleDatastores');
+    }
+
+    function changeAreaAndTitle(area, title){
+        console.log(area + title);
+        document.getElementById('diamond').setAttribute('src', area);
+        document.getElementById(title).setAttribute('class','displayedTitle');
+    }
+
+    function revertAreaAndTitle(){
+        document.getElementById('diamond').setAttribute('src','assets/architecture-all.png');
+        document.getElementById('titleAerial').setAttribute('class','hiddenTitle');
+        document.getElementById('titleUseCases').setAttribute('class','hiddenTitle');
+        document.getElementById('titleInfrastructure').setAttribute('class','hiddenTitle');
+        document.getElementById('titleDatastores').setAttribute('class','hiddenTitle');
+    }
+</script>
+</body>
+</html> 
+
+
+
+
