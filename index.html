@@ -26,43 +26,54 @@
             coords="71,120,151,201,392,202,471,120,391,40,151,39" shape="poly"
             onmouseover="changeToAerial()" 
             onmouseout="revertAreaAndTitle()"
-            data-title="Overview of SoEnergy's architecture"
+            data-title="Aerial view"
             href="https://app.terrastruct.com/diagrams/1495766155">
 
-          <area target="" alt="Use cases"
+          <area target="" alt="Product lines, capabilities and features"
             coords="72,124,152,204,150,441,104,394,70,360" shape="poly"
             onmouseover="changeToUseCases()" 
             onmouseout="revertAreaAndTitle()"
-            data-title="Use cases"
+            data-title="Product lines, capabilities and features"
             href="https://app.terrastruct.com/diagrams/270436396">
 
-          <area target="" alt="Infrastructure"
+          <area target="" alt="SoEnergy Infrastructure"
             coords="390,201,152,441" shape="rect"
             onmouseover="changeToInfrastructure()" 
             onmouseout="revertAreaAndTitle()"
-            data-title="Infrastructure"
+            data-title="SoEnergy Infrastructure"
             href="https://app.terrastruct.com/diagrams/92704779">
 
-          <area target="" alt="DataStores"
+          <area target="" alt="DataStores and Data pipelines"
             coords="392,201,471,120,472,362,391,442" shape="poly"
             onmouseover="changeToDatastores()" 
             onmouseout="revertAreaAndTitle()"
-            data-title="dataStores"  
+            data-title="DataStores and Data pipelines"
             href="https://app.terrastruct.com/diagrams/105369488">
       </map>  
     </div>
     <div>
       <div class="hiddenTitle" id="titleAerial">
-        Overview of our architecture. This view is perfect for anyone wanting to see the interaction between SoEnergy and other system. Uses the C4 model, starting with a context diagram.
+        <p>Overview of So Energy's architecture, with a focus on systems and integrations with third parties.</p>
+        <p>This aerial view is perfect for anyone wanting to see the interaction between So Energy and other systems. </p>
+        <p>Uses the <a href="https://c4model.com/">C4 model</a>, starting with a <a href="https://c4model.com/diagrams/system-context">context diagram.</a></p>
       </div>
       <div class="hiddenTitle" id="titleUseCases">
-        use cases
+        <p>A focus on on So Energy's Product Lines, Capabilities and features.</p>
+        <p>For Each capability, three different kinds of features are known:</p>
+        <ul>
+          <li>Customer facing capabilities</li>
+          <li>Agent facing capabilities: for So Energists. Customer Care Agents, Operations specialists, Marketing Agents...</li>
+          <li>Automated capabilities</li>
+        </ul>
       </div>
       <div class="hiddenTitle" id="titleInfrastructure">
-        Shows all our internal infrastructure. 
+        <p>Deep dive on So Energy's technical architecture and infrastructure. </p>
+        <p>All Frontend and Backend interactions are listed. To have a better visibility on the backend interactions, it is necessary to open the diagram for each backend microservice. </p>
+        <p>There is no focus on the interactions with third parties in this section.</p>
       </div>
       <div class="hiddenTitle" id="titleDatastores">
-        data
+        <p>Data stores and Data pipelines, for data synchronisation with external systems.</p>
+
       </div>
     </div>
   </div>
